@@ -161,7 +161,7 @@ body {
   /* umputin ke sebalah kanan */
   right: -100%;
   height: 100vh;
-  width: 35rem;
+  width: 60rem;
   padding: 0 1.5rem;
   color: var(--primary);
   background-color: #fff;
@@ -257,6 +257,11 @@ body {
   cursor: pointer;
 }
 
+/* untuk checkout */
+.form-container .checkout-button.disabled{
+  background-color: #999;
+  cursor: not-allowed;
+}
 
 
 /* untuk checkout form */

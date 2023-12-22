@@ -23,8 +23,7 @@
     />
     <!-- Alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <!-- App -->
-    <script src="src/app.js"></script>
+   
   </head>
   <body>
     <!-- Navbar star x-data agar apline bisa di baja di baca di navbar -->
@@ -89,23 +88,27 @@
         <!-- form container -->
         <div class="form-container" x-show="$store.cart.items.length">
           <form action="" id="checkoutForm">
+            <!-- untuk kirim cart hiden -->
+            <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)"> 
+            <input type="hidden" name="total" x-model="$store.cart.total">
+             <!-- untuk kirim cart hiden -->
             <h5>Data Costumer</h5>
-
             <label for="name">
               <span>Name</span>
               <input type="text" name="name" id="name">
             </label>
+
             <label for="email">
               <span>Email</span>
               <input type="email" name="email" id="email">
             </label>
+
             <label for="phone">
               <span>Phone</span>
               <input type="number" name="phone" id="phone" autocomplete="off">
             </label>
-            <button type="submit" class="checkout-button" id="checkout-button" value="">Chekout</button>
 
-            
+            <button class="checkout-button disabled" type="submit"  id="checkout-button" value="checkout">Chekout</button>
           </form>
         </div>
 
@@ -240,7 +243,7 @@
                     <use href="images/feather-icons/feather-sprite.svg#shopping-cart" />
                   </svg>
               </a>
-              <a href="#" class="item-detail-button-1">
+              <a href="#">
                 <svg
                 width="24"
                 height="24"
@@ -420,7 +423,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/3.jpg" alt="produk1" />
+          <img src="images/biji-kopi/2.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Fiddle Heads</h3>
             <p>
@@ -452,7 +455,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/2.jpg" alt="produk1" />
+          <img src="images/biji-kopi/3.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Guatemala Coffee</h3>
             <p>
@@ -484,7 +487,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/12.jpg" alt="produk1" />
+          <img src="images/biji-kopi/4.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Paradise Montaine</h3>
             <p>
@@ -516,7 +519,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/7.jpg" alt="produk1" />
+          <img src="images/biji-kopi/5.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Small Batch Coffee</h3>
             <p>
@@ -548,7 +551,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/15.jpg" alt="produk1" />
+          <img src="images/biji-kopi/6.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Go Africa Coffee</h3>
             <p>
@@ -580,7 +583,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/9.jpg" alt="produk1" />
+          <img src="images/biji-kopi/7.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Cultuvate Coffee</h3>
             <p>
@@ -612,7 +615,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/14.jpg" alt="produk1" />
+          <img src="images/biji-kopi/8.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Coffee KING</h3>
             <p>
@@ -644,7 +647,7 @@
       <div class="modal-container">
         <a href="#" class="close-icon"><i data-feather="x"></i></a>
         <div class="model-content">
-          <img src="images/biji-kopi/13.jpg" alt="produk1" />
+          <img src="images/biji-kopi/9.jpg" alt="produk1" />
           <div class="product-content">
             <h3>Espreso Coffee</h3>
             <p>
@@ -677,5 +680,7 @@
     </script>
     <!-- My JavaScript -->
     <script src="js/main.js"></script>
+     <!-- App -->
+     <script src="src/app.js"></script>
   </body>
 </html>
